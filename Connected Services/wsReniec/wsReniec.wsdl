@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="BuscarDNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarDNIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDNI">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarDNIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Coddni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoMaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="año" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nacionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dirección" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarDNIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Coddni" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoMaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="año" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nacionalidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dirección" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarDNIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarDNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarDNIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BuscarDNISoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarDNI" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDNISoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarDNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarDNISoapIn">
+    <wsdl:part name="parameters" element="tns:ListarDNI" />
+  </wsdl:message>
+  <wsdl:message name="ListarDNISoapOut">
+    <wsdl:part name="parameters" element="tns:ListarDNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDNISoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarDNI" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDNISoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarDNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDNISoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarDNI" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarDNISoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarDNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDNISoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarDNI" />
+  </wsdl:message>
+  <wsdl:message name="EliminarDNISoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarDNIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsReniecSoap">
+    <wsdl:operation name="BuscarDNI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consultar DNI cliente</wsdl:documentation>
+      <wsdl:input message="tns:BuscarDNISoapIn" />
+      <wsdl:output message="tns:BuscarDNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDNI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listar DNI clientes</wsdl:documentation>
+      <wsdl:input message="tns:ListarDNISoapIn" />
+      <wsdl:output message="tns:ListarDNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDNI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agregar DNI cliente</wsdl:documentation>
+      <wsdl:input message="tns:AgregarDNISoapIn" />
+      <wsdl:output message="tns:AgregarDNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDNI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualizar DNI cliente</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarDNISoapIn" />
+      <wsdl:output message="tns:ActualizarDNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDNI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminar DNI cliente</wsdl:documentation>
+      <wsdl:input message="tns:EliminarDNISoapIn" />
+      <wsdl:output message="tns:EliminarDNISoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsReniecSoap" type="tns:wsReniecSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarDNI">
+      <soap:operation soapAction="http://tempuri.org/BuscarDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDNI">
+      <soap:operation soapAction="http://tempuri.org/ListarDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDNI">
+      <soap:operation soapAction="http://tempuri.org/AgregarDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDNI">
+      <soap:operation soapAction="http://tempuri.org/ActualizarDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDNI">
+      <soap:operation soapAction="http://tempuri.org/EliminarDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsReniecSoap12" type="tns:wsReniecSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarDNI">
+      <soap12:operation soapAction="http://tempuri.org/BuscarDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDNI">
+      <soap12:operation soapAction="http://tempuri.org/ListarDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDNI">
+      <soap12:operation soapAction="http://tempuri.org/AgregarDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDNI">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDNI">
+      <soap12:operation soapAction="http://tempuri.org/EliminarDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsReniec">
+    <wsdl:port name="wsReniecSoap" binding="tns:wsReniecSoap">
+      <soap:address location="http://riguelao.somee.com/wsReniec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsReniecSoap12" binding="tns:wsReniecSoap12">
+      <soap12:address location="http://riguelao.somee.com/wsReniec.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
